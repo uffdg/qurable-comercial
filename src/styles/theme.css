@@ -2,6 +2,14 @@
 
 :root {
   --font-size: 16px;
+  --qurable-purple: #6430f7;
+  --qurable-purple-dark: #4320a5;
+  --qurable-purple-soft: #ede8ff;
+  --qurable-ink: #2f2e35;
+  --qurable-night: #0d0c14;
+  --qurable-paper: #f8f7f5;
+  --qurable-line: #d7d6db;
+  --qurable-muted: #63626f;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -126,6 +134,9 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'PP Neue Montreal', system-ui, sans-serif;
+    color: var(--qurable-ink);
+    background: var(--qurable-paper);
   }
 
   /**
@@ -177,5 +188,187 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
+  }
+}
+
+@layer components {
+  .q-page {
+    background:
+      linear-gradient(rgba(47, 46, 53, 0.024) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(47, 46, 53, 0.024) 1px, transparent 1px),
+      var(--qurable-paper);
+    background-size: 48px 48px;
+    color: var(--qurable-ink);
+    font-family: 'PP Neue Montreal', system-ui, sans-serif;
+    overflow-x: clip;
+  }
+
+  .q-nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .q-nav a,
+  .q-nav div {
+    font-family: 'PP Neue Montreal', system-ui, sans-serif;
+  }
+
+  .q-hero {
+    isolation: isolate;
+  }
+
+  .q-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(70% 70% at 50% 40%, #000 34%, transparent 100%);
+  }
+
+  .q-hero > div {
+    position: relative;
+    z-index: 1;
+  }
+
+  .q-hero h1 {
+    color: rgba(255, 255, 255, 0.94) !important;
+    font-family: 'TWK Lausanne', 'PP Neue Montreal', system-ui, sans-serif;
+    font-weight: 800 !important;
+    line-height: 1.04 !important;
+  }
+
+  .q-hero h1 span,
+  .q-gradient-text {
+    background: linear-gradient(105deg, #a06fff 0%, #7c42f8 22%, #6430f7 48%, #9b6bff 100%);
+    background-clip: text;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .q-hero p {
+    color: rgba(255, 255, 255, 0.64) !important;
+    max-width: 64ch;
+  }
+
+  .q-hero .inline-flex:not(a) {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .q-hero .inline-flex svg {
+    color: var(--qurable-purple) !important;
+  }
+
+  .q-hero button:first-child,
+  .q-dark-section button,
+  .q-solution button,
+  .q-brand-button {
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: linear-gradient(105deg, #7c42f8 0%, #6430f7 50%, #4f1fe6 100%) !important;
+    box-shadow: 0 18px 48px rgba(100, 48, 247, 0.26);
+  }
+
+  .q-hero button:last-child {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: rgba(255, 255, 255, 0.82) !important;
+    border-radius: 999px !important;
+  }
+
+  .q-solution {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 82% 0%, rgba(100, 48, 247, 0.16), transparent 36%),
+      #ffffff;
+    box-shadow: 0 18px 56px rgba(47, 46, 53, 0.08);
+  }
+
+  .q-dark-section {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(100, 48, 247, 0.36), transparent 38%),
+      linear-gradient(180deg, #18171c 0%, #0d0c14 100%);
+  }
+
+  .q-dark-section h2 {
+    font-family: 'TWK Lausanne', 'PP Neue Montreal', system-ui, sans-serif;
+    font-weight: 800 !important;
+    line-height: 1.06 !important;
+  }
+
+  .q-home-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 58px rgba(47, 46, 53, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  }
+
+  .q-home-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.7;
+  }
+
+  .q-home-card::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 42%;
+    z-index: -1;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.13) 100%);
+    pointer-events: none;
+  }
+
+  .q-home-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 76px rgba(47, 46, 53, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+
+  .q-home-card h3 {
+    font-family: 'TWK Lausanne', 'PP Neue Montreal', system-ui, sans-serif;
+    font-weight: 800 !important;
+  }
+
+  .q-home-card-number {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.13);
+    font-family: 'TWK Lausanne', 'PP Neue Montreal', system-ui, sans-serif;
+    font-size: clamp(4.4rem, 8vw, 6.2rem);
+    font-weight: 800;
+    line-height: 0.8;
+  }
+
+  .q-home-card-misc {
+    position: absolute;
+    right: -18px;
+    bottom: 28px;
+    width: min(82%, 420px);
+    color: rgba(255, 255, 255, 0.38);
+    opacity: 0.95;
+    pointer-events: none;
   }
 }

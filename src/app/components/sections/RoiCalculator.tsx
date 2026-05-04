@@ -164,7 +164,7 @@ export default function RoiCalculator({
               className="px-6 py-2 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90 whitespace-nowrap"
               style={{ backgroundColor: accent }}
             >
-              Agendá una demo ↗
+              Agendar demo ↗
             </button>
           </div>
 

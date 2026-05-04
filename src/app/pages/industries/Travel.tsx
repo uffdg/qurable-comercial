@@ -19,9 +19,9 @@ const ACCENT_BG = '#E0F2FE';
 
 export default function Travel() {
   return (
-    <div className="min-h-screen bg-[#FFFFFF]">
+    <div className="q-page min-h-screen bg-[#F8F7F5]">
       {/* Top bar */}
-      <div className="border-b border-[#D7D6DB] bg-[#FFFFFF]">
+      <div className="q-nav border-b border-black/5 bg-[#F8F7F5]/90 backdrop-blur">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link
             to="/"
@@ -36,8 +36,8 @@ export default function Travel() {
 
       {/* Hero */}
       <div
-        className="border-b border-[#D7D6DB]"
-        style={{ background: `linear-gradient(135deg, ${ACCENT_BG} 0%, #FFFFFF 100%)` }}
+        className="q-hero relative overflow-hidden border-b border-white/10"
+        style={{ background: "radial-gradient(circle at 72% 18%, rgba(100,48,247,0.34), transparent 34%), radial-gradient(circle at 18% 82%, rgba(67,32,165,0.28), transparent 35%), #0D0C14" }}
       >
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
           <div className="max-w-3xl">
@@ -49,21 +49,21 @@ export default function Travel() {
               Viajes y Hotelería
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#2F2E35] mb-5 leading-tight">
-              La crisis de identidad del huésped
+              Cada estadía y cada vuelo
               <br />
-              <span style={{ color: ACCENT }}>se resuelve con datos unificados</span>
+              <span style={{ color: ACCENT }}>pueden construir relación</span>
             </h1>
             <p className="text-lg text-[#63626F] mb-8">
-              Entre 2022 y 2025 el costo de adquisición creció 35% mientras el CLV apenas avanzó 4.5%.
-              La inteligencia artificial y la resolución de identidad son la respuesta para devolver
-              eficiencia al motor de marketing.
+              La diferencia ya no está solo en la tarifa o la habitación. Está en la relación.
+              Qurable transforma cada interacción del viajero en una experiencia personalizada que
+              impulsa preferencia, recompra y valor de largo plazo.
             </p>
             <div className="flex flex-wrap gap-3">
               <button
                 className="px-7 py-3 rounded-lg font-medium text-white transition-colors"
                 style={{ backgroundColor: ACCENT }}
               >
-                Agendá una demo ↗
+                Agendar demo ↗
               </button>
               <button className="px-7 py-3 bg-[#FFFFFF] text-[#3A3941] rounded-lg font-medium border border-[#BFBDC5] hover:bg-[#FAFAFA] transition-colors">
                 Ver el análisis completo
@@ -231,7 +231,7 @@ export default function Travel() {
 
       {/* Qurable solution */}
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="rounded-2xl border border-[#D7D6DB] p-8 md:p-12 bg-gradient-to-br from-[#EBE4FF] to-[#FFFFFF]">
+        <div className="q-solution rounded-[28px] border border-[#D7D6DB] p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <p className="text-xs font-semibold tracking-widest text-[#6430F7] uppercase mb-2">
@@ -266,7 +266,7 @@ export default function Travel() {
       </div>
 
       {/* CTA */}
-      <div className="bg-[#2F2E35] text-white py-16">
+      <div className="q-dark-section text-white py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             ¿Listo para dejar de pagar dos veces por el mismo huésped?
@@ -278,7 +278,7 @@ export default function Travel() {
             className="px-8 py-3 rounded-lg font-medium text-white transition-colors"
             style={{ backgroundColor: ACCENT }}
           >
-            Agendá una demo ↗
+            Agendar demo ↗
           </button>
         </div>
       </div>
