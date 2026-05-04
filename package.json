@@ -6,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "deploy": "vite build && gh-pages -d dist -t true"
+    "deploy": "vite build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
