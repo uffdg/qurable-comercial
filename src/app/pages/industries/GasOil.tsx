@@ -128,7 +128,7 @@ export default function GasOil() {
             Descuentos quirúrgicos para proteger el margen
           </h2>
           <p className="text-[#63626F] mt-2 max-w-2xl mx-auto">
-            Plataformas como Upside ya prueban el modelo: ofertar solo a los clientes no comprometidos,
+            Las plataformas líderes ya prueban el modelo: ofertar solo a los clientes no comprometidos,
             no a quienes ya hubieran venido de todos modos.
           </p>
         </div>
@@ -161,7 +161,7 @@ export default function GasOil() {
                 Programas que están funcionando
               </p>
               <h2 className="text-3xl font-bold text-[#2F2E35] mb-5">
-                ExxonMobil Rewards+, 7-Eleven con Siri y la app que te paga el cargado
+                Pago integrado, recompensa instantánea y la app que te paga el cargado
               </h2>
               <p className="text-[#63626F] mb-4">
                 Los programas líderes ya integran pago, recompensa y conversión cruzada en un mismo flujo.

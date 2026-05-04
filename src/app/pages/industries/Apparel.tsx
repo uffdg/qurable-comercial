@@ -72,7 +72,7 @@ export default function Apparel() {
           <StatCard label="Tasa de devolución 2024" value="16.9%" tone="negative" />
           <StatCard label="Mercancía estancada (USD)" value="cientos de miles M" tone="negative" />
           <StatCard label="Ahorro con alteraciones VIP" value="-devoluciones" tone="positive" />
-          <StatCard label="Gymshark a 10M de clientes" value="10 años" tone="positive" />
+          <StatCard label="Frecuencia con miembros activos" value="+2.1x" tone="positive" />
         </div>
       </div>
 
@@ -129,8 +129,9 @@ export default function Apparel() {
               integren historial digital con compras físicas.
             </p>
             <p className="text-[#63626F]">
-              Marcas como <strong>Nike</strong> resuelven esto con cuenta unificada. Marcas como <strong>Gymshark</strong> escalaron
-              a 10M de clientes en 10 años construyendo comunidad alrededor de valores compartidos.
+              Las marcas que escalan en moda resuelven esto con <strong>cuenta unificada</strong> a través
+              de app, web y POS, y construyen <strong>comunidad</strong> alrededor de valores compartidos
+              antes que catálogo.
             </p>
           </div>
 
@@ -155,28 +156,28 @@ export default function Apparel() {
         </div>
       </div>
 
-      {/* Cases */}
+      {/* Patterns */}
       <div className="bg-[#FAFAFA] border-y border-[#D7D6DB] py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold tracking-widest text-[#91909D] uppercase mb-2">
-              Referentes del sector
+              Patrones que están funcionando
             </p>
             <h2 className="text-3xl font-bold text-[#2F2E35]">
-              Cómo Gymshark y Nike redefinieron la lealtad en moda
+              Dos jugadas que están redefiniendo la lealtad en moda
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5">
-            <CaseCard
-              brand="Gymshark"
-              insight="0 → 10 millones de clientes en una década"
-              description="Construyó comunidad antes que catálogo. Salud, inclusividad y marketing de influencers como tejido emocional."
+            <PatternCard
+              eyebrow="Comunidad antes que catálogo"
+              insight="0 → 10M de clientes en una década es posible"
+              description="Las marcas que crecen rápido lo hacen construyendo comunidad alrededor de valores: salud, inclusividad, propósito. Influencers como tejido emocional, no como medio paid."
             />
-            <CaseCard
-              brand="Nike"
-              insight="Cuenta unificada app + web + tienda física"
-              description="Identidad de miembro que sigue al cliente. Recomendaciones curadas con datos de navegación digital y compras físicas."
+            <PatternCard
+              eyebrow="Cuenta unificada"
+              insight="Identidad única en app, web y tienda"
+              description="El miembro es el mismo en cada canal. Recomendaciones curadas combinan navegación online con compras físicas, y los beneficios viajan con el cliente, no con el canal."
             />
           </div>
         </div>
@@ -297,22 +298,19 @@ function BenefitCard({
   );
 }
 
-function CaseCard({
-  brand,
+function PatternCard({
+  eyebrow,
   insight,
   description,
 }: {
-  brand: string;
+  eyebrow: string;
   insight: string;
   description: string;
 }) {
   return (
     <div className="bg-[#FFFFFF] rounded-xl border border-[#D7D6DB] p-6">
-      <div className="text-xs uppercase tracking-wider text-[#91909D] mb-2">Caso</div>
-      <h3 className="text-2xl font-bold text-[#2F2E35] mb-3">{brand}</h3>
-      <p className="text-sm font-medium mb-3" style={{ color: ACCENT }}>
-        {insight}
-      </p>
+      <div className="text-xs uppercase tracking-wider text-[#91909D] mb-2">{eyebrow}</div>
+      <h3 className="text-xl font-bold text-[#2F2E35] mb-3">{insight}</h3>
       <p className="text-sm text-[#63626F]">{description}</p>
     </div>
   );

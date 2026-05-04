@@ -73,7 +73,7 @@ export default function Fintech() {
           <StatCard label="Clientes que generan 90% del profit" value="10%" tone="positive" />
           <StatCard label="Tasa de churn anual promedio" value="25%" tone="negative" />
           <StatCard label="Confianza tras 1 transacción fallida" value="frágil" tone="negative" />
-          <StatCard label="Upside con cross-sell predictivo" value="+18%" tone="positive" />
+          <StatCard label="Uplift con cross-sell predictivo" value="+18%" tone="positive" />
         </div>
       </div>
 
